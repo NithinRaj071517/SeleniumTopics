@@ -35,7 +35,7 @@ public class windowHandlingPractise {
 		System.out.println(driver.getWindowHandle());
 		driver.switchTo().window(sh);
 		System.out.println(driver.getWindowHandle());
-		driver.switchTo().window(list.get(0));
+		driver.switchTo().window(firstWindow);
 		System.out.println(driver.getWindowHandle());
 		driver.close();
 		list.clear();
