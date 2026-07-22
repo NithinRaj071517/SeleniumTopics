@@ -1,0 +1,68 @@
+Locating Element with known Attribute and Known Element:
+		
+		//tagname[@attribute='value']		
+			
+			Ex: //input[@name='password']
+
+
+Locating Element with known Attribute and unknown element:
+		
+		//*[@attribute='value']
+		
+			Ex: //*[@name='username']
+
+			
+Locating Element with known visible text: (exact match  "text case sensitive")
+		
+		//tagname[text()='exact text']
+			
+			Ex: //p[text()='OrangeHRM OS 5.9']
+			
+			
+Locating Element when part of the  visible text known: (partial  match )			
+
+		//tagname[contains(text(),'partial text')]
+		
+			Ex: //span[contains(text(),'Please enter the us')]
+
+
+Locating Element with Multiple Attributes:
+
+		//tagname[@attribute1='value'][@attribute2='value'].....
+
+			Ex: //input[@name='username'][@placeholder='Username']
+			
+
+Locating element when starting visible text known:
+	
+		//tagname[starts-with(text(),'starting text')]
+		
+			Ex: 	//a[starts-with(text(),'OrangeHRM')]
+			
+	
+Locating element with dynamic attribute values:
+		
+		//tagname[contains(@attribute,'partial value')]
+		
+			Ex: 	//div[contains(@class,'orangehrm')]
+			
+		//tagname[starts-with(@attribute,'fixed prefix value')]
+		
+			Ex: 	//div[starts-with(@class,'orangehrm')]
+		
+	
+Locating Element relative to known Element:
+
+        Locating a parent Element:
+            
+            //<known Xpath>/parent::tagname
+            
+                Ex:   //input[@id='firstName']/parent::div
+                
+                
+        Locating a child Element:
+            
+            //<known Xpath>/child::tagname
+            //<known Xpath>/tagname
+            
+                Ex:   //div[@class='orangehrm-todo-list']/child::div
