@@ -23,6 +23,8 @@ public class KeyBoardAction {
 		key.moveToElement(element).keyDown(Keys.CONTROL).perform();
 		key.moveToElement(element).keyDown(Keys.LEFT_SHIFT).perform();
 		//key.moveToElement(element).keyDown(Keys.ESCAPE).perform();
+		key.sendKeys(Keys.ENTER).perform();
+		key.sendKeys(Keys.NUMPAD3).perform();
 		System.out.println("sada");
 	}
 }

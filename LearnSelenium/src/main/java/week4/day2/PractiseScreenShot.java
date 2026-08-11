@@ -20,15 +20,15 @@ public class PractiseScreenShot {
 		driver.get("https://leafground.com/dashboard.xhtml");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-		driver.findElement(By.xpath("(//ul[@class=\"layout-menu\"]/li)[2]")).click();
-		driver.findElement(By.linkText("Alert")).click();
 		
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File takeScreenShot = ts.getScreenshotAs(OutputType.FILE);
-		File saveFile= new File("./snaps/img2.png");
-		FileUtils.copyFile(takeScreenShot, saveFile);
 		
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File des = new File("./snaps/nith.jpeg");
+		FileUtils.copyFile(src, des);
+		
+		
+	
 		
 		
 		
